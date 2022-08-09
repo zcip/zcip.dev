@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 
@@ -17,6 +16,10 @@ const Home: NextPage = () => {
         <h1 className={styles.title}>Hello</h1>
         <Link href="/about">
           <a>About me</a>
+        </Link>
+
+        <Link href="/til">
+          <a>TODAY I Lerned</a>
         </Link>
       </main>
 

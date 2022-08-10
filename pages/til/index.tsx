@@ -5,6 +5,7 @@ const TilPage: NextPage = () => {
   return (
     <div>
       <Link href="/til/first-css">はじめてのcss</Link>
+      <Link href="/til/first-mdx">はじめてのmdx</Link>
     </div>
   );
 };

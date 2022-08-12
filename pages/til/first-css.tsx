@@ -10,15 +10,15 @@ const FirstCss: NextPage = () => {
       </div>
       <div></div>
       <iframe
-        src="https://codesandbox.io/embed/epic-galois-92y4iz?fontsize=14&hidenavigation=1&theme=dark"
+        src="https://codesandbox.io/embed/magic-navigation-menu-indicator-92y4iz?autoresize=1&fontsize=14&hidenavigation=1&theme=dark"
         style={{
           width: "80%",
-          height: "300px",
+          height: "400px",
           border: 0,
           borderRadius: "4px",
           overflow: "hidden",
         }}
-        title="React"
+        title="Magic Navigation Menu Indicator"
         allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
         sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
       ></iframe>

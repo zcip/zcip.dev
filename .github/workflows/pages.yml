@@ -93,3 +93,13 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
+      - name: Notify to Discord bot
+        uses: sarisia/actions-status-discord@v1
+        if: always()
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        with:
+          title: "deploy status"
+          username: GitHub Actions
+          nodetail: false 
+          status: ${{ job.status }}

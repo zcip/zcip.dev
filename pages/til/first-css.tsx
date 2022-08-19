@@ -1,5 +1,28 @@
 import { NextPage } from "next";
 
+type CodeSandboxPreviewProps = {
+  title: string;
+  src: string;
+};
+
+function CodeSandboxPreview({ src, title }: CodeSandboxPreviewProps) {
+  return (
+    <iframe
+      src={src}
+      style={{
+        width: "80%",
+        height: "400px",
+        border: 0,
+        borderRadius: "4px",
+        overflow: "hidden",
+      }}
+      title={title}
+      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+    ></iframe>
+  );
+}
+
 const FirstCss: NextPage = () => {
   return (
     <div className="root">
@@ -9,32 +32,14 @@ const FirstCss: NextPage = () => {
         <a href="https://github.com/vercel/styled-jsx">vercel/styled-jsx</a>
       </div>
       <div className="iframs">
-        <iframe
-          src="https://codesandbox.io/embed/magic-navigation-menu-indicator-92y4iz?autoresize=1&fontsize=14&hidenavigation=1&theme=dark"
-          style={{
-            width: "80%",
-            height: "400px",
-            border: 0,
-            borderRadius: "4px",
-            overflow: "hidden",
-          }}
+        <CodeSandboxPreview
           title="Magic Navigation Menu Indicator"
-          allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-          sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-        ></iframe>
-        <iframe
-          src="https://codesandbox.io/embed/css-icon-hover-jbhb8v?fontsize=14&hidenavigation=1&theme=dark"
-          style={{
-            width: "80%",
-            height: "400px",
-            border: 0,
-            borderRadius: "4px",
-            overflow: "hidden",
-          }}
+          src="https://codesandbox.io/embed/magic-navigation-menu-indicator-92y4iz?autoresize=1&fontsize=14&hidenavigation=1&theme=dark"
+        />
+        <CodeSandboxPreview
           title="css icon hover"
-          allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-          sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-        ></iframe>
+          src="https://codesandbox.io/embed/css-icon-hover-jbhb8v?fontsize=14&hidenavigation=1&theme=dark"
+        />
       </div>
       <style jsx>{`
         .root {

@@ -1,4 +1,5 @@
 import { NextPage } from "next"
+import Header from "../../components/Header"
 
 type CodeSandboxPreviewProps = {
   title: string
@@ -26,6 +27,7 @@ function CodeSandboxPreview({ src, title }: CodeSandboxPreviewProps) {
 const FirstCss: NextPage = () => {
   return (
     <div className="root">
+      <Header />
       <div className="about">
         ブログっぽいのでマークダウンで書きたいところだが、とりあえずすすめるために新しいページを用意する。
         デフォルトで導入されているので、styled-jsxの書き味をためそうと思う。

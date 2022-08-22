@@ -1,9 +1,9 @@
-import { NextPage } from "next";
+import { NextPage } from "next"
 
 type CodeSandboxPreviewProps = {
-  title: string;
-  src: string;
-};
+  title: string
+  src: string
+}
 
 function CodeSandboxPreview({ src, title }: CodeSandboxPreviewProps) {
   return (
@@ -20,7 +20,7 @@ function CodeSandboxPreview({ src, title }: CodeSandboxPreviewProps) {
       allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
       sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
     ></iframe>
-  );
+  )
 }
 
 const FirstCss: NextPage = () => {
@@ -59,7 +59,7 @@ const FirstCss: NextPage = () => {
         }
       `}</style>
     </div>
-  );
-};
+  )
+}
 
-export default FirstCss;
+export default FirstCss

@@ -1,5 +1,5 @@
-import { NextPage } from "next";
-import Link from "next/link";
+import { NextPage } from "next"
+import Link from "next/link"
 
 const TilPage: NextPage = () => {
   return (
@@ -8,7 +8,7 @@ const TilPage: NextPage = () => {
       <Link href="/til/first-css">はじめてのcss</Link>
       <Link href="/til/first-mdx">はじめてのmdx</Link>
     </div>
-  );
-};
+  )
+}
 
-export default TilPage;
+export default TilPage

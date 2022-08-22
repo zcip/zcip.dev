@@ -9,7 +9,7 @@ const withMDX = require("@next/mdx")({
     // If you use `MDXProvider`, uncomment the following line.
     // providerImportSource: "@mdx-js/react",
   },
-});
+})
 
 const nextConfig = {
   reactStrictMode: true,
@@ -22,6 +22,6 @@ const nextConfig = {
     },
   },
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
-};
+}
 
-module.exports = withMDX(nextConfig);
+module.exports = withMDX(nextConfig)

@@ -42,6 +42,10 @@ const FirstCss: NextPage = () => {
           title="css icon hover"
           src="https://codesandbox.io/embed/css-icon-hover-jbhb8v?fontsize=14&hidenavigation=1&theme=dark"
         />
+        <CodeSandboxPreview
+          title="active tab navigation"
+          src="https://codesandbox.io/s/active-tab-2xqero?fontsize=14&hidenavigation=1&theme=dark"
+        />
       </div>
       <style jsx>{`
         .root {

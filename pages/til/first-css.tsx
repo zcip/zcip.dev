@@ -44,7 +44,7 @@ const FirstCss: NextPage = () => {
         />
         <CodeSandboxPreview
           title="active tab navigation"
-          src="https://codesandbox.io/s/active-tab-2xqero?fontsize=14&hidenavigation=1&theme=dark"
+          src="https://codesandbox.io/embed/active-tab-2xqero?fontsize=14&hidenavigation=1&theme=dark"
         />
         <CodeSandboxPreview
           title="swipe next animation"

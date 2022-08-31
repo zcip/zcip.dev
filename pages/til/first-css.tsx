@@ -50,6 +50,10 @@ const FirstCss: NextPage = () => {
           title="swipe next animation"
           src="https://codesandbox.io/embed/dank-paper-573gjc?fontsize=14&hidenavigation=1&theme=dark"
         />
+        <CodeSandboxPreview
+          title="animated action menu"
+          src="https://codesandbox.io/embed/animated-action-menu-5dxtvj?fontsize=14&hidenavigation=1&theme=dark"
+        />
       </div>
       <style jsx>{`
         .root {

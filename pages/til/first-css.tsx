@@ -24,6 +24,34 @@ function CodeSandboxPreview({ src, title }: CodeSandboxPreviewProps) {
   )
 }
 
+type CodeSandboxDataProps = {
+  title: string
+  src: string
+}
+
+const data: CodeSandboxDataProps[] = [
+  {
+    title: "Magic Navigation Menu Indicator",
+    src: "https://codesandbox.io/embed/magic-navigation-menu-indicator-92y4iz?autoresize=1&fontsize=14&hidenavigation=1&theme=dark",
+  },
+  {
+    title: "css icon hover",
+    src: "https://codesandbox.io/embed/css-icon-hover-jbhb8v?fontsize=14&hidenavigation=1&theme=dark",
+  },
+  {
+    title: "active tab navigation",
+    src: "https://codesandbox.io/embed/active-tab-2xqero?fontsize=14&hidenavigation=1&theme=dark",
+  },
+  {
+    title: "swipe next animation",
+    src: "https://codesandbox.io/embed/dank-paper-573gjc?fontsize=14&hidenavigation=1&theme=dark",
+  },
+  {
+    title: "animated action menu",
+    src: "https://codesandbox.io/embed/animated-action-menu-5dxtvj?fontsize=14&hidenavigation=1&theme=dark",
+  },
+]
+
 const FirstCss: NextPage = () => {
   return (
     <div className="root">
@@ -34,26 +62,9 @@ const FirstCss: NextPage = () => {
         <a href="https://github.com/vercel/styled-jsx">vercel/styled-jsx</a>
       </div>
       <div className="iframs">
-        <CodeSandboxPreview
-          title="Magic Navigation Menu Indicator"
-          src="https://codesandbox.io/embed/magic-navigation-menu-indicator-92y4iz?autoresize=1&fontsize=14&hidenavigation=1&theme=dark"
-        />
-        <CodeSandboxPreview
-          title="css icon hover"
-          src="https://codesandbox.io/embed/css-icon-hover-jbhb8v?fontsize=14&hidenavigation=1&theme=dark"
-        />
-        <CodeSandboxPreview
-          title="active tab navigation"
-          src="https://codesandbox.io/embed/active-tab-2xqero?fontsize=14&hidenavigation=1&theme=dark"
-        />
-        <CodeSandboxPreview
-          title="swipe next animation"
-          src="https://codesandbox.io/embed/dank-paper-573gjc?fontsize=14&hidenavigation=1&theme=dark"
-        />
-        <CodeSandboxPreview
-          title="animated action menu"
-          src="https://codesandbox.io/embed/animated-action-menu-5dxtvj?fontsize=14&hidenavigation=1&theme=dark"
-        />
+        {data.map((x) => (
+          <CodeSandboxPreview title={x.title} src={x.src} key={x.src} />
+        ))}
       </div>
       <style jsx>{`
         .root {

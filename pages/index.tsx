@@ -16,13 +16,9 @@ const Home: NextPage = () => {
       <div className={styles.container}>
         <main className={styles.main}>
           <h1 className={styles.title}>Hello</h1>
-          <Link href="/about">
-            <a>About me</a>
-          </Link>
+          <Link href="/about">About me</Link>
 
-          <Link href="/til">
-            <a>TODAY I Lerned</a>
-          </Link>
+          <Link href="/til">TODAY I Lerned</Link>
         </main>
 
         <footer className={styles.footer}></footer>

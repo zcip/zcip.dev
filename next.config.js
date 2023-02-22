@@ -14,12 +14,9 @@ const withMDX = require("@next/mdx")({
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  // Error: Image Optimization using Next.js' default loader is not compatible with `next export`.
   // @see https://nextjs.org/docs/api-reference/next/image#unoptimized
-  experimental: {
-    images: {
-      unoptimized: true,
-    },
+  images: {
+    unoptimized: true,
   },
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
 }

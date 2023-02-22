@@ -6,17 +6,25 @@ export default function Header() {
     <header className="header">
       <nav>
         <div className="logo">
-          <Link href={"/"}>zcip</Link>
+          <Link href={"/"} legacyBehavior>
+            zcip
+          </Link>
         </div>
         <ul>
           <li>
-            <Link href="/til">TIL</Link>
+            <Link href="/til" legacyBehavior>
+              TIL
+            </Link>
           </li>
           <li>
-            <Link href="/blog">Blog</Link>
+            <Link href="/blog" legacyBehavior>
+              Blog
+            </Link>
           </li>
           <li>
-            <Link href="/about">About</Link>
+            <Link href="/about" legacyBehavior>
+              About
+            </Link>
           </li>
         </ul>
       </nav>

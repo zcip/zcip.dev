@@ -56,21 +56,40 @@ const FirstCss: NextPage = () => {
   return (
     <div className="root">
       <Header />
-      <div className="about">
-        ブログっぽいのでマークダウンで書きたいところだが、とりあえずすすめるために新しいページを用意する。
-        デフォルトで導入されているので、styled-jsxの書き味をためそうと思う。
-        <a href="https://github.com/vercel/styled-jsx">vercel/styled-jsx</a>
-      </div>
-      <div className="iframs">
-        {data.map((x) => (
-          <CodeSandboxPreview title={x.title} src={x.src} key={x.src} />
-        ))}
+      <div className="flex">
+        <ul>
+          {data.map((x) => (
+            <li key={x.title}>{x.title}</li>
+          ))}
+        </ul>
+        <div></div>
+        <div className="iframs">
+          {data.map((x) => (
+            <CodeSandboxPreview title={x.title} src={x.src} key={x.src} />
+          ))}
+        </div>
       </div>
       <style jsx>{`
         .root {
           display: flex;
           flex-direction: column;
           align-items: center;
+          width: 100%;
+        }
+        .flex {
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+          padding: 20px;
+        }
+        .root ul {
+          width: 240px;
+        }
+        .root ul li {
+          width: 100%;
+          list-style: none;
+          min-height: 24px;
+          word-wrap: break-word;
         }
         .about {
           padding: 20px;

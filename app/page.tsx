@@ -1,23 +1,17 @@
-import type { NextPage } from "next"
-import Head from "next/head"
+"use client"
+
 import Link from "next/link"
 import Header from "../components/Header"
-import styles from "../styles/Home.module.css"
+import styles from "./page.module.css"
 
-const Home: NextPage = () => {
+export default function Home() {
   return (
     <>
-      <Head>
-        <title>zcip&apos; github.io</title>
-        <meta name="description" content="zcip website" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <Header />
       <div className={styles.container}>
         <main className={styles.main}>
           <h1 className={styles.title}>Hello</h1>
           <Link href="/about">About me</Link>
-
           <Link href="/til">TODAY I Lerned</Link>
         </main>
 
@@ -26,5 +20,3 @@ const Home: NextPage = () => {
     </>
   )
 }
-
-export default Home

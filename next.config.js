@@ -18,6 +18,10 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  experimental: {
+    appDir: true,
+    typedRoutes: true,
+  },
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
 }
 

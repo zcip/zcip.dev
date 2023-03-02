@@ -1,5 +1,4 @@
 import "./globals.css"
-import StyledJsxRegistry from "./registry"
 
 export const metadata = {
   title: "Home",
@@ -14,16 +13,14 @@ export const metadata = {
   },
 }
 
-export default function RootLayout({
-  children,
-}: {
+type Props = {
   children: React.ReactNode
-}) {
+}
+
+export default function RootLayout({ children }: Props) {
   return (
     <html>
-      <body>
-        <StyledJsxRegistry>{children}</StyledJsxRegistry>
-      </body>
+      <body>{children}</body>
     </html>
   )
 }

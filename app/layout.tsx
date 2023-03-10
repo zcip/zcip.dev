@@ -1,4 +1,6 @@
 import "./globals.css"
+import "./app.css"
+
 import Header from "../components/Header"
 
 export const metadata = {

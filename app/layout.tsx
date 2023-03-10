@@ -9,6 +9,9 @@ export const metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  other: {
+    "Hatena::Bookmark": "nocomment",
+  },
 }
 
 export default function RootLayout({ children }: React.PropsWithChildren<{}>) {

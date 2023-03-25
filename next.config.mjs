@@ -2,13 +2,14 @@
 import remarkGfm from "remark-gfm"
 import addMdx from "@next/mdx"
 import rehypePrettyCode from "rehype-pretty-code"
+import { prettyCodeOptions } from "./lib/rehypePrettyCodeOptions.mjs"
 
 // @see https://nextjs.org/docs/advanced-features/using-mdx
 const withMDX = addMdx({
   extension: /\.mdx?$/,
   options: {
     remarkPlugins: [remarkGfm],
-    rehypePlugins: [],
+    rehypePlugins: [[rehypePrettyCode, prettyCodeOptions]],
     // If you use `MDXProvider`, uncomment the following line.
     // providerImportSource: "@mdx-js/react",
   },

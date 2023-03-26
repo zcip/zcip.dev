@@ -3,7 +3,7 @@ import path from "path"
 import mdxCompiler from "../../../lib/mdxCompile"
 
 const getPath = (fileName: string) =>
-  path.join(process.cwd(), "content", "typescript", fileName, "content.mdx")
+  path.join(process.cwd(), "content", "typescript", fileName, "index.mdx")
 
 type Props = {
   params: { slug: string }

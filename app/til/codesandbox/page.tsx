@@ -1,5 +1,3 @@
-"use client"
-
 import { json as data } from "./codeSandboxes"
 import CodeSandboxPreview from "./CodeSandboxPreview"
 

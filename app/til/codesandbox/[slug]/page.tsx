@@ -1,7 +1,13 @@
 import { json } from "../codeSandboxes"
 import CodeSandboxPreview from "../CodeSandboxPreview"
 
-export default function Page({ params }: { params: { slug: string } }) {
+type Props = {
+  params: {
+    slug: string
+  }
+}
+
+export default function Page({ params }: Props) {
   const codeSandboxData = json.find((x) => x.id === params.slug)
 
   if (!codeSandboxData) {
@@ -9,4 +15,11 @@ export default function Page({ params }: { params: { slug: string } }) {
   }
 
   return <CodeSandboxPreview {...codeSandboxData} />
+}
+
+export async function generateStaticParams() {
+  const slugs = json.map((x) => {
+    return { slug: x.id }
+  })
+  return slugs
 }

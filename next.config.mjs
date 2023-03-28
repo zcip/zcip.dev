@@ -28,6 +28,7 @@ const nextConfig = withMDX({
     typedRoutes: true,
   },
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
+  output: "export"
 })
 
 export default nextConfig

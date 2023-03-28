@@ -2,6 +2,7 @@ import fs from "fs/promises"
 import path from "path"
 import { format } from "date-fns"
 import mdxCompiler from "../../../lib/mdxCompile"
+import { arrayToParams } from "../../../lib/misc"
 
 const getBlogPath = (fileName: string) =>
   path.join(process.cwd(), "content", "blog", fileName, "index.mdx")
@@ -35,9 +36,5 @@ export async function generateStaticParams() {
     path.join(process.cwd(), "content", "blog")
   )
 
-  const slugs = blogFileNames.map((slug) => {
-    slug
-  })
-
-  return slugs
+  return arrayToParams(blogFileNames, "slug")
 }

@@ -9,6 +9,7 @@ export default function Home() {
         <main className="flex flex-col justify-center items-center min-h-screen flex-1">
           <Link href="/about">About me</Link>
           <Link href="/til">TODAY I Lerned</Link>
+          <Link href="/typescript">TypeScript</Link>
         </main>
       </div>
     </>

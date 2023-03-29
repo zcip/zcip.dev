@@ -8,12 +8,14 @@ export const metadata = {
 
 export default async function BlogPage() {
   const blogNames = await fs.readdir(getBlogDirpath())
-  const blogs = await Promise.all(
-    blogNames.flatMap(async (name) => ({
-      ...(await getCachedBlogContent(name)),
-      slug: name,
-    }))
-  )
+  const blogs = (
+    await Promise.all(
+      blogNames.flatMap(async (name) => ({
+        ...(await getCachedBlogContent(name)),
+        slug: name,
+      }))
+    )
+  ).sort((a, b) => Number(a.frontmatter.date) - Number(b.frontmatter.date))
 
   return (
     <div className="px-2">

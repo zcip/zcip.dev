@@ -1,5 +1,4 @@
 import fs from "fs/promises"
-import path from "path"
 import { format } from "date-fns"
 import { arrayToParams } from "../../../lib/misc"
 import { Metadata } from "next"

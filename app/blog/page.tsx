@@ -2,6 +2,10 @@ import Link from "next/link"
 import fs from "fs/promises"
 import path from "path"
 
+export const metadata = {
+  title: "Blog - zcip",
+}
+
 export default async function BlogPage() {
   const titles = await fs.readdir(path.join(process.cwd(), "content", "blog"))
 

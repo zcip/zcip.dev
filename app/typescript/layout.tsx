@@ -1,5 +1,9 @@
 import Link from "next/link"
 
+export const metadata = {
+  title: "TypeScript - zcip",
+}
+
 function Sideber() {
   return (
     <div className="w-60 px-4 pt-4">

@@ -7,6 +7,12 @@ type Props = {
   }
 }
 
+export async function generateMetadata({ params }: Props) {
+  const codeSandboxData = json.find((x) => x.id === params.slug)
+
+  return { title: codeSandboxData?.title }
+}
+
 export default function Page({ params }: Props) {
   const codeSandboxData = json.find((x) => x.id === params.slug)
 

@@ -80,6 +80,27 @@ Next.jsでMDを有効にする設定を見てみる。
 
 https://twitter.com/leeerob/status/1640445075959484418
 
-<div className="not-prose">
- <Tweet id="1640445075959484418" />
-</div>
+<Tweet id="1640445075959484418" />
+
+## MDXへのTweetの埋め込み
+
+https://twitter.com/leeerob/status/1640445075959484418 という感じでリンクを置くだけで、埋め込みにするようにしたいな...
+
+<Tweet id="1353188620912402433"/>
+
+残念ながら、リンクの拡張表示はしないみたい。
+
+https://twitter.com/kenzoooooB/status/1353188620912402433
+
+https://github.com/vercel-labs/react-tweet
+
+## Next.js 13でMDXを使う
+https://github.com/hashicorp/next-mdx-remote
+
+next-mdx-remoteが有力な選択肢の一つにあがる。
+
+いくつかの制限について書く。
+
+- 変数が使えない
+- コンポーネントを直接Importできない
+- フロントエンジニア系の個人ブログで動くサンプルを多用したい場合は、他の選択肢をとったほうがいい

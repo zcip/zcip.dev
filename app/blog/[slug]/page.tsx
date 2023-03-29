@@ -1,38 +1,16 @@
 import fs from "fs/promises"
-import { cache } from "react"
 import path from "path"
 import { format } from "date-fns"
-import mdxCompiler from "../../../lib/mdxCompile"
 import { arrayToParams } from "../../../lib/misc"
 import { Metadata } from "next"
-
-type TFrontmatter = {
-  title: string
-  date: string
-  tags?: string[]
-}
+import { getBlogDirpath, getCachedBlogContent } from "../misc"
 
 type Params = { slug: string }
-
-type Props = {
-  params: Params
-}
-
-const getBlogFilePath = (blogDirName: string) =>
-  path.join(process.cwd(), "content", "blog", blogDirName, "index.mdx")
-
-// ブログ記事のコンテンツをキャッシュする
-const getCachedBlogContent = cache(async (id: string) => {
-  const blogContent = await fs.readFile(getBlogFilePath(id), "utf-8")
-  const { content, frontmatter } = await mdxCompiler<TFrontmatter>(blogContent)
-  return { content, frontmatter }
-})
+type Props = { params: Params }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { title } = (await getCachedBlogContent(params.slug)).frontmatter
-  return {
-    title,
-  }
+  return { title }
 }
 
 export default async function Page({ params }: Props) {
@@ -48,9 +26,7 @@ export default async function Page({ params }: Props) {
 }
 
 export async function generateStaticParams() {
-  const blogFileNames = await fs.readdir(
-    path.join(process.cwd(), "content", "blog")
-  )
+  const blogFileNames = await fs.readdir(getBlogDirpath())
 
   return arrayToParams(blogFileNames, "slug")
 }

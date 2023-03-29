@@ -1,10 +1,4 @@
-export type CodeSandboxDataType = {
-  title: string
-  id: string
-  src: string
-}
-
-export const json: CodeSandboxDataType[] = [
+export const json = [
   {
     title: "Magic Navigation Menu Indicator",
     id: "92y4iz",
@@ -30,4 +24,8 @@ export const json: CodeSandboxDataType[] = [
     id: "5dxtvj",
     src: "https://codesandbox.io/embed/animated-action-menu-5dxtvj?fontsize=14&hidenavigation=1&theme=dark",
   },
-]
+] as const
+
+export type CodeSandboxDataType = typeof json[number]
+
+export type CodeSandboxIds = typeof json[number]["id"]

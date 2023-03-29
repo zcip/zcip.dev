@@ -9,7 +9,7 @@ export default function Page() {
   return (
     <div className="flex flex-col items-center gap-3 w-full">
       {data.map((x) => (
-        <CodeSandboxPreview title={x.title} src={x.src} id={x.id} key={x.id} />
+        <CodeSandboxPreview {...x} key={x.id} />
       ))}
     </div>
   )

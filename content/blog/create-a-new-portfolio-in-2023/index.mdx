@@ -107,3 +107,23 @@ next-mdx-remoteが有力な選択肢の一つにあがる。
 
 ### RSCでレンダリングされない問題
 
+`react-tweet` で `fetch` のオプションに `cache: 'force-cache` がついているのが問題。
+
+['no-store' fetch in \`getTweet()\` breaks static rendering · Issue #66 · vercel-labs/react-tweet](https://github.com/vercel-labs/react-tweet/issues/66)
+
+```ts showLineNumbers{53} {53-54} filename="react-tweet"
+  // The default `cache: 'force-cache'` can return 200 when there's an error
+  const res = await fetch(url.toString(), { cache: 'no-store' })
+  const isJson = res.headers.get('content-type')?.includes('application/json')
+  const data = isJson ? await res.json() : undefined
+```
+
+```log
+DynamicServerError: Dynamic server usage: no-store fetch
+...
+digest: 'DYNAMIC_SERVER_USAGE'
+```
+
+`patch-package` を使って解消。時間があればPRする。
+
+

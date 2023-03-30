@@ -1,15 +1,19 @@
+:root {
+  --code-line-highlight: rgba(200, 200, 255, 0.1);
+  --link-color: #818890;
+}
+
 body {
   overflow-x: hidden;
 }
 
 a {
-  color: #818890
+  color: var(--link-color);
 }
 
 pre > code {
   display: grid;
 }
-
 
 /* https://rehype-pretty-code.netlify.app/ */
 
@@ -27,15 +31,13 @@ div[data-rehype-pretty-code-fragment] {
     }
 
     & .word {
-      background: rgba(200, 200, 255, .15);
+      background: rgba(200, 200, 255, 0.15);
       padding: 0.25rem;
       border-radius: 0.25rem;
     }
 
     & code[data-line-numbers] {
-
       > .line::before {
-
         counter-increment: line;
         content: counter(line);
 
@@ -47,17 +49,13 @@ div[data-rehype-pretty-code-fragment] {
         color: gray;
       }
 
-      & code[data-line-numbers-max-digits="2"]>.line::before {
+      & code[data-line-numbers-max-digits="2"] > .line::before {
         width: 2rem;
       }
 
-      & code[data-line-numbers-max-digits="3"]>.line::before {
+      & code[data-line-numbers-max-digits="3"] > .line::before {
         width: 3rem;
       }
     }
   }
-}
-
-:root {
-  --code-line-highlight: rgba(200, 200, 255, .1);
 }

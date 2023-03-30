@@ -27,7 +27,7 @@ export default function Layout({ children }: React.PropsWithChildren<{}>) {
     <div className="flex">
       <Sideber />
       <div className="container mx-auto pt-4">
-        <div className="prose lg:prose-xl">{children}</div>
+        <div className="prose lg:prose-xl prose-invert">{children}</div>
       </div>
     </div>
   )

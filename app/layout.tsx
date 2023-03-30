@@ -7,7 +7,9 @@ export const metadata = {
   title: "Home",
   description: `zcip's website`,
   icons: {
-    icon: "/favicon.ico",
+    // TODO: svg等の妥当なfaviconを設定する
+    //
+    icon: "/icon.png",
   },
   other: {
     "Hatena::Bookmark": "nocomment",
@@ -17,7 +19,7 @@ export const metadata = {
 export default function RootLayout({ children }: React.PropsWithChildren<{}>) {
   return (
     <html>
-      <body>
+      <body className="bg-gray-900">
         <Header />
         {children}
       </body>

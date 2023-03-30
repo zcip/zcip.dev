@@ -9,3 +9,47 @@ a {
 pre > code {
   display: grid;
 }
+
+code {
+  counter-reset: line;
+}
+ 
+code[data-line-numbers] > .line::before {
+  counter-increment: line;
+  content: counter(line);
+ 
+  /* Other styling */
+  display: inline-block;
+  width: 1rem;
+  margin-right: 2rem;
+  text-align: right;
+  color: gray;
+}
+
+div[data-rehype-pretty-code-fragment] code[data-line-numbers] code[data-line-numbers-max-digits="2"] > .line::before {
+  width: 2rem;
+}
+  
+div[data-rehype-pretty-code-fragment] code[data-line-numbers] code[data-line-numbers-max-digits="3"] > .line::before {
+  width: 3rem;
+}
+
+code .highlighted {
+  background: var(--code-line-highlight);
+  border-left-color: #60a5fa;
+}
+
+code .highlighted::before {
+  color: #94a3b8;
+}
+
+code .word {
+  background: rgba(200, 200, 255, .15);
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+}
+
+:root {
+  --code-line-highlight: rgba(200,200,255,.1);
+}
+

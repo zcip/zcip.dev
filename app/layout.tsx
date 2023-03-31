@@ -19,10 +19,10 @@ export const metadata = {
 
 function Footer() {
   return (
-    <footer className="p-4 mt-20 max-w-5xl mx-auto">
-      <nav className="grid grid-cols-2 gap-4">
-        <div className="pb-3 block p-4 border rounded-lg">
-          <Link href="/" className="mb-4 block text-gray-300 shadow">
+    <footer className="p-4 mt-20 max-w-4xl mx-auto">
+      <nav className="grid grid-cols-3 gap-4">
+        <div className="col-span-2 pb-3 p-4">
+          <Link href="/" className="mb-6 inline-block text-gray-300">
             zcip.web
           </Link>
           <p className="mb-6 text-gray-500 text-sm tracking-normal">
@@ -37,7 +37,23 @@ function Footer() {
             </li>
           </ul>
         </div>
-        <div>Sitemap</div>
+        <div className="p-4">
+          <h2 className="mb-6 font-semibold text-gray-700">Sitemap</h2>
+          <ul className="flex flex-col gap-2">
+            <li>
+              <Link href="/">Home</Link>
+            </li>
+            <li>
+              <Link href="/blog">Blog</Link>
+            </li>
+            <li>
+              <Link href="/til">Today I Learned</Link>
+            </li>
+            <li>
+              <a href="/sitemap.xml">Sitemap.xml</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </footer>
   )

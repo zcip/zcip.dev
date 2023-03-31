@@ -22,13 +22,19 @@ export default function Header() {
               </Link>
             </Li>
             <Li>
-              <Link href="/blog">Blog</Link>
+              <Link href="/blog" className="hover:text-white">
+                Blog
+              </Link>
             </Li>
             <Li>
-              <Link href="/til">TIL</Link>
+              <Link href="/til" className="hover:text-white">
+                TIL
+              </Link>
             </Li>
             <Li>
-              <Link href="/about">About</Link>
+              <Link href="/about" className="hover:text-white">
+                About
+              </Link>
             </Li>
           </ul>
         </div>

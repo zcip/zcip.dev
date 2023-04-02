@@ -20,3 +20,16 @@ export const getCachedBlogContent = cache(async (id: string) => {
   const { content, frontmatter } = await mdxCompiler<TFrontmatter>(blogContent)
   return { content, frontmatter }
 })
+
+export async function fetchBlogs() {
+  const blogNames = await fs.readdir(getBlogDirpath())
+  const blogs = (
+    await Promise.all(
+      blogNames.flatMap(async (name) => ({
+        ...(await getCachedBlogContent(name)),
+        slug: name,
+      }))
+    )
+  ).sort((a, b) => Number(b.frontmatter.date) - Number(a.frontmatter.date))
+  return blogs
+}

@@ -1,8 +1,8 @@
 import fs from "fs/promises"
-import { format } from "date-fns"
 import { arrayToParams } from "../../../lib/misc"
 import { Metadata } from "next"
-import { getBlogDirpath, getCachedBlogContent } from "../misc"
+import { getBlogDirpath, getCachedBlogContent } from "../lib"
+import { formatJP } from "../../../lib/date"
 
 type Params = { slug: string }
 type Props = { params: Params }
@@ -18,7 +18,7 @@ export default async function Page({ params }: Props) {
   return (
     <div className="prose lg:prose-xl prose-invert max-w-full">
       <h1>{frontmatter.title}</h1>
-      <h2>{format(new Date(frontmatter.date), "yyyy年M月d日")}</h2>
+      <h2>{formatJP(frontmatter.date)}</h2>
       <div>{content}</div>
     </div>
   )

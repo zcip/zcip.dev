@@ -1,20 +1,6 @@
 import Link from "next/link"
-import fs from "fs/promises"
-import { getBlogDirpath, getCachedBlogContent } from "./misc"
+import { fetchBlogs } from "./lib"
 import { format } from "date-fns"
-
-async function fetchBlogs() {
-  const blogNames = await fs.readdir(getBlogDirpath())
-  const blogs = (
-    await Promise.all(
-      blogNames.flatMap(async (name) => ({
-        ...(await getCachedBlogContent(name)),
-        slug: name,
-      }))
-    )
-  ).sort((a, b) => Number(b.frontmatter.date) - Number(a.frontmatter.date))
-  return blogs
-}
 
 export const metadata = {
   title: "Blog - zcip",

@@ -100,7 +100,7 @@ export default function RootLayout({ children }: React.PropsWithChildren<{}>) {
     <html>
       <body className="bg-gray-900 min-h-screen flex flex-col">
         <Header />
-        {children}
+        <div className="flex-1 mx-auto pt-4 max-w-3xl w-full">{children}</div>
         <Footer />
       </body>
     </html>

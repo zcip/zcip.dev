@@ -16,7 +16,7 @@ export default async function Page({ params }: Props) {
   const { frontmatter, content } = await getCachedBlogContent(params.slug)
 
   return (
-    <div className="prose lg:prose-xl prose-invert">
+    <div className="prose lg:prose-xl prose-invert max-w-full">
       <h1>{frontmatter.title}</h1>
       <h2>{format(new Date(frontmatter.date), "yyyy年M月d日")}</h2>
       <div>{content}</div>

@@ -4,7 +4,7 @@ import heroPic from "../../public/til/til.jpg"
 
 export default function TilPage() {
   return (
-    <div className="text-gray-300 max-w-3xl lg:max-w-4xl flex flex-col px-4 w-full pt-20">
+    <div className="text-gray-300 max-w-3xl lg:max-w-4xl flex flex-col w-full pt-20">
       <div className="w-full m-auto">
         <h1 className="font-bold text-6xl mb-16">
           TODAY I LERANED

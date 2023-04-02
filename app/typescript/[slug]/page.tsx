@@ -1,7 +1,7 @@
 import fsP from "fs/promises"
 import path from "path"
-import mdxCompiler from "../../../lib/mdxCompile"
-import { arrayToParams } from "../../../lib/misc"
+import mdxCompiler from "@/lib/mdxCompile"
+import { arrayToParams } from "@/lib/misc"
 import { Metadata } from "next"
 
 const getPath = (fileName: string) =>

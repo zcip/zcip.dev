@@ -1,8 +1,8 @@
 import fs from "fs/promises"
-import { arrayToParams } from "../../../lib/misc"
 import { Metadata } from "next"
 import { getBlogDirpath, getCachedBlogContent } from "../lib"
-import { formatJP } from "../../../lib/date"
+import { arrayToParams } from "@/lib/misc"
+import { formatJP } from "@/lib/date"
 
 type Params = { slug: string }
 type Props = { params: Params }

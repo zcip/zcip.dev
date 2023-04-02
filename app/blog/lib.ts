@@ -1,7 +1,7 @@
 import fs from "fs/promises"
 import path from "path"
 import { cache } from "react"
-import mdxCompiler from "../../lib/mdxCompile"
+import mdxCompiler from "@/lib/mdxCompile"
 
 type TFrontmatter = {
   title: string

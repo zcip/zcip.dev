@@ -1,25 +1,16 @@
 # 日付処理
 
-JavaScriptには、標準でDateオブジェクトが用意されていますが、そのままでは日付処理が煩雑になる場合があります。
-そこで、日付ライブラリを利用することで、日付処理の効率化を図ることができます。
-日付ライブラリは、数多くのものがありますが、その中でもおすすめなのがdate-fnsです。
-date-fnsは、Moment.jsよりも軽量なライブラリであり、ES6のimportやTreeShakingなどにも対応しています。
+- date-fns
 
-## 1. インストール
+date-fnsは、Moment.jsよりも軽量なライブラリであり、TreeShakingに対応
 
-```sh
-npm install date-fns
-```
-
-## 2. 日付のフォーマット変換
+## 日付のフォーマット変換
 
 日付のフォーマット変換には、`date-fns` の `format` 関数を使います。
-この関数を使うことで、指定したフォーマットに従って日付を文字列化することができます。
 
 ```ts 
-import { format } from 'date-fns'
+import { format } from "date-fns"
 
-const date = new Date()
-const formattedDate = format(date, 'yyyy/MM/dd')
-console.log(formattedDate) // 2023/03/24
+console.log(format(new Date(), "yyyy/MM/dd")) // 2023/03/24
+console.log(format(new Date("2023-04-02"), "yyyy年M月d日") // 2023年4月2日
 ```

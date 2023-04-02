@@ -2,7 +2,6 @@ import "./globals.css"
 import "./app.css"
 
 import Link from "next/link"
-import Header from "../components/Header"
 
 export const metadata = {
   title: "Home",
@@ -16,10 +15,47 @@ export const metadata = {
     "Hatena::Bookmark": "nocomment",
   },
 }
+function Header() {
+  return (
+    <header className="w-screen h-24 flex items-center p-6">
+      <nav className="w-full h-full flex text-white items-center flex-row">
+        <div className="text-white font-medium text-lg">
+          <Link href={"/"} className="tracking-wider text-lg text-white">
+            zcip
+          </Link>
+        </div>
+        <div className="flex w-full justify-center items-center">
+          <ul className="flex gap-2 w-auto text-lg text-gray-300">
+            <li>
+              <Link href="/blog" className="hover:text-white">
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link href="/typescript" className="hover:text-white">
+                TypeScript
+              </Link>
+            </li>
+            <li>
+              <Link href="/til" className="hover:text-white">
+                TIL
+              </Link>
+            </li>
+            <li>
+              <Link href="/about" className="hover:text-white">
+                About
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  )
+}
 
 function Footer() {
   return (
-    <footer className="p-4 mt-20 max-w-4xl mx-auto">
+    <footer className="p-4 mt-40 max-w-4xl mx-auto">
       <nav className="grid grid-cols-3 gap-4">
         <div className="col-span-2 pb-3 p-4">
           <Link href="/" className="mb-6 inline-block text-gray-300">
@@ -62,7 +98,7 @@ function Footer() {
 export default function RootLayout({ children }: React.PropsWithChildren<{}>) {
   return (
     <html>
-      <body className="bg-gray-900">
+      <body className="bg-gray-900 min-h-screen flex flex-col">
         <Header />
         {children}
         <Footer />

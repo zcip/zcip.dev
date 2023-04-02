@@ -6,7 +6,7 @@ export const metadata = {
 
 function Sideber() {
   return (
-    <div className="w-60 px-4 pt-4">
+    <div className="w-60 px-4 pt-4 absolute">
       <h3 className="font-medium">
         <Link href="/typescript">TypeScript</Link>
       </h3>
@@ -26,7 +26,7 @@ export default function Layout({ children }: React.PropsWithChildren<{}>) {
   return (
     <div className="flex">
       <Sideber />
-      <div className="container mx-auto pt-4">
+      <div className="max-w-4xl mx-auto pt-4">
         <div className="prose lg:prose-xl prose-invert">{children}</div>
       </div>
     </div>

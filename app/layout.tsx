@@ -91,6 +91,9 @@ function Footer() {
               <Link href="/til">Today I Learned</Link>
             </li>
             <li>
+              <Link href="/roadmap">Roadmap</Link>
+            </li>
+            <li>
               <a href="/sitemap.xml">Sitemap.xml</a>
             </li>
           </ul>
@@ -103,9 +106,9 @@ function Footer() {
 export default function RootLayout({ children }: React.PropsWithChildren<{}>) {
   return (
     <html>
-      <body className="bg-gray-900 min-h-screen flex flex-col">
+      <body className="bg-gray-900 min-h-screen flex flex-col items-center">
         <Header />
-        <div className="flex-1 mx-auto pt-4 max-w-3xl w-full">{children}</div>
+        <div className="flex-1 pt-4 max-w-3xl w-full mx-2">{children}</div>
         <Footer />
       </body>
     </html>

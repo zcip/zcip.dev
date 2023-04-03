@@ -1,10 +1,9 @@
 import Image from "next/image"
 import heroPic from "@/public/done_is_better.webp"
-import Link from "next/link"
 
 export default function RoadmapPage() {
   return (
-    <div className="text-gray-300 mx-2">
+    <div className="text-gray-300">
       <h1 className="text-white text-4xl mb-10">Roadmap</h1>
       <Image
         src={heroPic}

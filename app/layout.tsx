@@ -46,6 +46,11 @@ function Header() {
                 About
               </Link>
             </li>
+            <li>
+              <Link href="/roadmap" className="hover:text-white">
+                Roadmap
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>
@@ -100,9 +105,7 @@ export default function RootLayout({ children }: React.PropsWithChildren<{}>) {
     <html>
       <body className="bg-gray-900 min-h-screen flex flex-col">
         <Header />
-        <div className="flex-1 mx-auto pt-4 max-w-3xl w-full">
-          {children}
-        </div>
+        <div className="flex-1 mx-auto pt-4 max-w-3xl w-full">{children}</div>
         <Footer />
       </body>
     </html>

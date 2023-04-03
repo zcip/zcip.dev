@@ -4,14 +4,14 @@ import Link from "next/link"
 
 export default function RoadmapPage() {
   return (
-    <div className="text-gray-300">
+    <div className="text-gray-300 mx-2">
       <h1 className="text-white text-4xl mb-10">Roadmap</h1>
       <Image
         src={heroPic}
         alt="Done is better than perfect. 完璧を目指すよりもまず終わらせろ"
         className="rounded-lg mb-10"
       />
-      <p className="tracking-wide leading-9 mb-6">
+      <p className="tracking-wide leading-9 mb-20">
         このWebsiteでしたいことは、たくさんありますが、それを全て実装してしては終わりがないのは明白です。
         「完璧を目指すよりもまずは終わらせろ」の精神でこのWebsiteは永遠のバージョン0.1として、少しずつ
         少しずつ改良して行こうと考えています。

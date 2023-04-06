@@ -11,6 +11,15 @@ pre > code {
   display: grid;
 }
 
+.prose pre {
+  width: 100vw;
+  position: relative;
+  max-width: 56rem;
+  padding: 3rem 1rem;
+  transform: translateX(-50%);
+  margin-left: 50%;
+}
+
 /* https://rehype-pretty-code.netlify.app/ */
 
 div[data-rehype-pretty-code-fragment] {

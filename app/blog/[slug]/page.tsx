@@ -23,6 +23,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     await generateOGImage({ title, ...params })
   }
 
+  const description = `${title}について`
+  const imageUrl = IS_PRODUCTION
+    ? `${HOST}/images/generated/blog/og-${params.slug}.png`
+    : `${HOST}/public/images/generated/blog/og-${params.slug}.png`
+
   return {
     title,
     openGraph: {
@@ -30,15 +35,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `${HOST}/blog/${params.slug}`,
       siteName: "zcip.web",
       // TODO: descriptionを設定する
-      description: `${title}について`,
+      description,
       images: {
-        url: IS_PRODUCTION
-          ? `${HOST}/images/generated/blog/og-${params.slug}.png`
-          : `${HOST}/public/images/generated/blog/og-${params.slug}.png`,
+        url: imageUrl,
         width: 1200,
         height: 630,
       },
       type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: imageUrl,
     },
   }
 }

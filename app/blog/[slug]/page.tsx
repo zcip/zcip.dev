@@ -6,7 +6,7 @@ import { arrayToParams } from "@/lib/misc"
 import { formatJP } from "@/lib/date"
 import { generateOGImage } from "@/lib/og-image"
 import path from "path"
-import { HOST } from "@/lib/constants"
+import { HOST, IS_PRODUCTION } from "@/lib/constants"
 
 type Params = { slug: string }
 type Props = { params: Params }
@@ -27,7 +27,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     openGraph: {
       images: {
-        url: `${HOST}/public/images/generated/blog/og-${params.slug}.png`,
+        url: IS_PRODUCTION
+          ? `${HOST}/images/generated/blog/og-${params.slug}.png`
+          : `${HOST}/public/images/generated/blog/og-${params.slug}.png`,
       },
     },
   }

@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import heroPic from "../../public/til/til.jpg"
+import heroPic from "../../public/til/til.webp"
 
 export default function TilPage() {
   return (

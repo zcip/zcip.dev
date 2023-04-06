@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { fetchBlogs } from "./lib"
+import { fetchBlogsWithCache } from "./lib"
 import { format } from "date-fns"
 
 export const metadata = {
@@ -7,7 +7,7 @@ export const metadata = {
 }
 
 export default async function BlogPage() {
-  const blogs = await fetchBlogs()
+  const blogs = await fetchBlogsWithCache()
 
   return (
     <main className="">

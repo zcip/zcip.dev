@@ -24,8 +24,9 @@ const nextConfig = withMDX({
   },
   experimental: {
     appDir: true,
-    // mdxRs: true,
     typedRoutes: true,
+    serverComponentsExternalPackages: ["@resvg/resvg-js", "satori"],
+    // mdxRs: true,
   },
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
   output: "export",

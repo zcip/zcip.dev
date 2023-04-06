@@ -33,3 +33,5 @@ export async function fetchBlogs() {
   ).sort((a, b) => Number(b.frontmatter.date) - Number(a.frontmatter.date))
   return blogs
 }
+
+export const fetchBlogsWithCache = cache(fetchBlogs)

@@ -32,11 +32,6 @@ function Header() {
               </Link>
             </li>
             <li>
-              <Link href="/typescript" className="hover:text-white">
-                TypeScript
-              </Link>
-            </li>
-            <li>
               <Link href="/til" className="hover:text-white">
                 TIL
               </Link>
@@ -44,11 +39,6 @@ function Header() {
             <li>
               <Link href="/about" className="hover:text-white">
                 About
-              </Link>
-            </li>
-            <li>
-              <Link href="/roadmap" className="hover:text-white">
-                Roadmap
               </Link>
             </li>
           </ul>

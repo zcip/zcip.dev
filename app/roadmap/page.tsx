@@ -27,9 +27,9 @@ export default function RoadmapPage() {
         <li>tailwind.cssのカスタマイズ</li>
         <li>アニメーション</li>
         <li>デザインシステムの導入</li>
-        <li>OGPの設定</li>
         <li>RSSの設定</li>
         <li>`Subscribe to my newsletter` の導入</li>
+        <li>x OGPの設定</li>
       </ul>
     </div>
   )

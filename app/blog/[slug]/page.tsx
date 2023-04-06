@@ -26,11 +26,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title,
     openGraph: {
+      title,
+      url: HOST,
+      siteName: "zcip.web",
       images: {
         url: IS_PRODUCTION
           ? `${HOST}/images/generated/blog/og-${params.slug}.png`
           : `${HOST}/public/images/generated/blog/og-${params.slug}.png`,
       },
+      type: "article",
     },
   }
 }

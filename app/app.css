@@ -14,7 +14,7 @@ pre > code {
 .prose pre {
   width: 100vw;
   position: relative;
-  max-width: 56rem;
+  max-width: 58rem;
   padding: 3rem 1rem;
   transform: translateX(-50%);
   margin-left: 50%;

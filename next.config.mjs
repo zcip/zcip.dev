@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
+import compose from "next-compose-plugins"
 import remarkGfm from "remark-gfm"
 import addMdx from "@next/mdx"
 import rehypePrettyCode from "rehype-pretty-code"
+import analyze from "@next/bundle-analyzer"
 import { prettyCodeOptions } from "./lib/rehypePrettyCodeOptions.mjs"
 
 // @see https://nextjs.org/docs/advanced-features/using-mdx
@@ -15,7 +17,11 @@ const withMDX = addMdx({
   },
 })
 
-const nextConfig = withMDX({
+const withBundleAnalyzer = analyze({
+  enabled: process.env.ANALYZE === "true",
+})
+
+const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   // @see https://nextjs.org/docs/api-reference/next/image#unoptimized
@@ -30,6 +36,6 @@ const nextConfig = withMDX({
   },
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
   output: "export",
-})
+}
 
-export default nextConfig
+export default compose([withMDX, withBundleAnalyzer], nextConfig)

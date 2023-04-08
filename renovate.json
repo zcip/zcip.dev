@@ -11,6 +11,7 @@
     "group:linters",
     "schedule:daily"
   ],
+  "platformAutomerge": true,
   "dependencyDashboard": true,
   "ignoreDeps": []
 }

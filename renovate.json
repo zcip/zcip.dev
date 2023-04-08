@@ -6,11 +6,13 @@
     ":automergeLinters",
     ":automergeMinor",
     ":automergeTypes",
+    ":maintainLockFilesWeekly",
     "group:allNonMajor",
     "group:definitelyTyped",
     "group:linters",
     "schedule:daily"
   ],
+  "automerge": true,
   "platformAutomerge": true,
   "dependencyDashboard": true,
   "ignoreDeps": []

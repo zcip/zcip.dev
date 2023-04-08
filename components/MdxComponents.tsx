@@ -1,5 +1,7 @@
+/* eslint-disable jsx-a11y/alt-text */
 import { Tweet, type TweetProps, type TweetComponents } from "react-tweet"
 import Image from "next/image"
+import LinkCard from "./LinkCard"
 
 const tweetComponents: TweetComponents = {
   AvatarImg: (props) => <Image {...props} />,
@@ -12,4 +14,5 @@ export const components = {
       <Tweet {...props} components={tweetComponents} />
     </div>
   ),
+  LinkCard,
 }

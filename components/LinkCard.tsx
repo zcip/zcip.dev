@@ -34,20 +34,29 @@ export async function LinkCardImpl({ href }: Props) {
       href={href}
       target="_brank"
       rel="noopener noreferrer"
-      className="not-prose w-full flex flex-row items-center transition border-2 rounded-lg border-gray-600 hover:bg-gray-700 h-[132px] overflow-hidden p-0  no-underline relative"
+      className="not-prose w-full flex flex-row items-center transition border-2 rounded-lg border-gray-600 hover:bg-gray-700 h-[132px] overflow-hidden p-0  no-underline relative mb-4"
     >
       <div className="flex-1 flex flex-col w-full flex-wrap items-start px-3 gap-1">
-        <h4 className="text-lg m-0 p-0 line-clamp-1 tracking-tight">{title}</h4>
-        <div className="text-sm text-gray-400 line-clamp-2">{description}</div>
+        <span className="text-lg m-0 p-0 line-clamp-1 tracking-tight">
+          {title ? title : href}
+        </span>
+        {description && (
+          <div className="text-sm text-gray-400 line-clamp-2">
+            {description}
+          </div>
+        )}
+
         <div className="flex flex-row gap-2">
-          <img
-            src={faviconUrl}
-            alt=""
-            loading="lazy"
-            width={16}
-            height={16}
-            className="fill-white"
-          />
+          {faviconUrl ? (
+            <img
+              src={faviconUrl}
+              alt=""
+              loading="lazy"
+              width={16}
+              height={16}
+              className="fill-white object-contain"
+            />
+          ) : null}
           <span className="text-gray-100 text-sm">{host}</span>
         </div>
       </div>

@@ -56,7 +56,7 @@ function Footer() {
           <Link href="/" className="mb-6 inline-block text-gray-300">
             zcip.web
           </Link>
-          <p className="mb-6 text-gray-500 text-sm tracking-normal">
+          <p className="mb-6 text-gray-300 text-sm tracking-normal">
             常にクリエイティブな解決策を模索し、新しいアイデアを実現することに情熱を注いでいます。
           </p>
           <ul className="mb-2 px-6 flex flex-row gap-4">
@@ -69,7 +69,7 @@ function Footer() {
           </ul>
         </div>
         <div className="p-4">
-          <h2 className="mb-6 font-semibold text-gray-700">Sitemap</h2>
+          <span className="mb-12 text-gray-300">Sitemap</span>
           <ul className="flex flex-col gap-2">
             <li>
               <Link href="/">Home</Link>
@@ -95,7 +95,7 @@ function Footer() {
 
 export default function RootLayout({ children }: React.PropsWithChildren<{}>) {
   return (
-    <html>
+    <html lang="ja">
       <body className="bg-gray-900 min-h-screen flex flex-col items-center">
         <Header />
         <div className="flex-1 pt-4 max-w-3xl w-full mx-2">{children}</div>

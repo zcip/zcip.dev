@@ -6,7 +6,7 @@
   body {
     overflow-x: hidden;
   }
-  h1 {
+  /* h1 {
     @apply leading-tight text-4xl md:text-5xl;
   }
   h2 {
@@ -23,7 +23,7 @@
   }
   h6 {
     @apply text-lg font-medium;
-  }
+  } */
   p {
     @apply mt-0 mb-8 text-gray-300;
   }

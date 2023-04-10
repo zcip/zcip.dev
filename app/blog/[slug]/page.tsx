@@ -58,8 +58,10 @@ export default async function Page({ params }: Props) {
 
   return (
     <div className="prose lg:prose-xl prose-invert max-w-full">
-      <h1>{frontmatter.title}</h1>
-      <h2>{formatJP(frontmatter.date)}</h2>
+      <div className="mb-20">
+        <h1>{frontmatter.title}</h1>
+        <span>{formatJP(frontmatter.date)}</span>
+      </div>
       <div>{content}</div>
     </div>
   )

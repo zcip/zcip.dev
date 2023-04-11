@@ -1,31 +1,34 @@
 ---
 title: 新しいポートフォリオの作成
 date: 2023-03-25
-tags: 
+tags:
   - web
   - react
   - next.js
 ---
 
 ## 2023/03/10
+
 とりあえず、このページを作業ログとして残していく。まずはサイト全体のカラーや体裁を整えていく。
 参考にするサイトは、
 
 https://kentcdodds.com
 
-を参考にする。 どうやらtailwind.cssを使っている。
-が、一般的なcssも存在している。 Gridコンポーネントを多用している。
-こいつは何者？ にしても、MDじゃないとログが書きづらい。
-Next.jsでMDを有効にする設定を見てみる。
+を参考にする。 どうやら tailwind.css を使っている。
+が、一般的な css も存在している。 Grid コンポーネントを多用している。
+こいつは何者？ にしても、MD じゃないとログが書きづらい。
+Next.js で MD を有効にする設定を見てみる。
+
 <a href="https://beta.nextjs.org/docs/guides/mdx">Markdown and MDX</a>
 に書いてある。
 
 完了。
 
 ### タイポグラフィ
+
 次は、タイポグラフィを考える。
-現状、h1やh2、h3がみんな同じサイズ。
-とりあえず、全体のcssでスタイルを当ててみる。
+現状、h1 や h2、h3 がみんな同じサイズ。
+とりあえず、全体の css でスタイルを当ててみる。
 
 [@tailwindcss/typography - Tailwind CSS](https://tailwindcss.com/docs/typography-plugin)
 
@@ -44,20 +47,20 @@ Next.jsでMDを有効にする設定を見てみる。
 <meta name="Hatena::Bookmark" content="nocomment" />
 ```
 
-
 ## 使っている技術
 
 https://nextjs.org/
 
-*Layout* 機能を使いたいのでNext13を使っているが、まだstatic export (next export)が機能しない。
+_Layout_ 機能を使いたいので Next13 を使っているが、まだ static export (next export)が機能しない。
 
 ## デザインシステム
+
 [スタイル | Spindle](https://spindle.ameba.design/styles/)
 
 https://spindle.ameba.design/styles/
 
-
 コードハイライトを考える。
+
 - prismjs
 
 ## 参考になる
@@ -67,21 +70,20 @@ https://www.haxibami.net/blog/posts/blog-renewal
 コードハイライトを導入
 [atomiks/rehype-pretty-code: Beautiful code blocks for your MD/MDX docs](https://github.com/atomiks/rehype-pretty-code)
 
-
 ## マークダウンをそのまま記事にする
 
-警告が発生した。余分な`class` がついているらしい。おそらくmdxのコンパイルの設定が必要。
-とりあえず、生成されたhtmlを確認してみる。
-拡張機能の問題だった。とりあえず開発中はOFFにする。
-開発用ブラウザ(devtoolのみ)を作成してもいいかもしれない。
+警告が発生した。余分な`class` がついているらしい。おそらく mdx のコンパイルの設定が必要。
+とりあえず、生成された html を確認してみる。
+拡張機能の問題だった。とりあえず開発中は OFF にする。
+開発用ブラウザ(devtool のみ)を作成してもいいかもしれない。
 
 ## Static Export
 
-この記事を書いている途中で、Next.jsの`App Router` でも、 `Static Export` がサポートされた。
+この記事を書いている途中で、Next.js の`App Router` でも、 `Static Export` がサポートされた。
 
 https://twitter.com/leeerob/status/1640445075959484418
 
-## MDXへのTweetの埋め込み
+## MDX への Tweet の埋め込み
 
 https://twitter.com/leeerob/status/1640445075959484418 という感じでリンクを置くだけで、埋め込みにするようにしたいな...
 
@@ -91,28 +93,29 @@ https://twitter.com/kenzoooooB/status/1353188620912402433
 
 https://github.com/vercel-labs/react-tweet
 
-## Next.js 13でMDXを使う
+## Next.js 13 で MDX を使う
+
 https://github.com/hashicorp/next-mdx-remote
 
-next-mdx-remoteが有力な選択肢の一つにあがる。
+next-mdx-remote が有力な選択肢の一つにあがる。
 
 いくつかの制限について書く。
 
 - 変数が使えない
-- コンポーネントを直接Importできない
+- コンポーネントを直接 Import できない
 - フロントエンジニア系の個人ブログで動くサンプルを多用したい場合は、他の選択肢をとったほうがいい
 
-### RSCでレンダリングされない問題
+### RSC でレンダリングされない問題
 
 `react-tweet` で `fetch` のオプションに `cache: 'force-cache` がついているのが問題。
 
 ['no-store' fetch in \`getTweet()\` breaks static rendering · Issue #66 · vercel-labs/react-tweet](https://github.com/vercel-labs/react-tweet/issues/66)
 
 ```ts showLineNumbers filename="react-tweet" /{ cache: 'no-store' }/
-  // The default `cache: 'force-cache'` can return 200 when there's an error
-  const res = await fetch(url.toString(), { cache: 'no-store' })
-  const isJson = res.headers.get('content-type')?.includes('application/json')
-  const data = isJson ? await res.json() : undefined
+// The default `cache: 'force-cache'` can return 200 when there's an error
+const res = await fetch(url.toString(), { cache: "no-store" })
+const isJson = res.headers.get("content-type")?.includes("application/json")
+const data = isJson ? await res.json() : undefined
 ```
 
 ```log
@@ -121,6 +124,4 @@ DynamicServerError: Dynamic server usage: no-store fetch
 digest: 'DYNAMIC_SERVER_USAGE'
 ```
 
-`patch-package` を使って解消。時間があればPRする。
-
-
+`patch-package` を使って解消。時間があれば PR する。

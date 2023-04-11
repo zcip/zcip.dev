@@ -5,28 +5,28 @@ title: process.envの型
 環境変数を使った分岐をする際に`process.env`などが使われます。
 
 ```ts
-process.env.NODE_ENV === 'production'
+process.env.NODE_ENV === "production"
 ```
 
 もともとの型付は以下なので、基本的に全て`string`になり型が弱いです。
 
 ```ts
 interface ProcessEnv {
-  [key: string]: string | undefined;
+  [key: string]: string | undefined
 }
 ```
 
 これを型付するには、プロジェクト内で`global.d.ts`等の型定義をおいて、以下のように上書きすると便利です。
 これで`process.env`が型的に扱いやすくなります。
-また、tsdoc形式でコメントを書けば何の値かがVSCode上でわかるのでプロジェクト特有の環境変数と使う場合はコメントを書くことをおすすめします。
+また、tsdoc 形式でコメントを書けば何の値かが VSCode 上でわかるのでプロジェクト特有の環境変数と使う場合はコメントを書くことをおすすめします。
 
 ```ts
 /// <reference types="node" />
 
 declare namespace NodeJS {
   interface ProcessEnv {
-    readonly NODE_ENV: 'development' | 'production' | 'test';
-    readonly PUBLIC_URL: string;
+    readonly NODE_ENV: "development" | "production" | "test"
+    readonly PUBLIC_URL: string
   }
 }
 ```

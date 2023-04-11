@@ -26,6 +26,6 @@ export const json = [
   },
 ] as const
 
-export type CodeSandboxDataType = typeof json[number]
+export type CodeSandboxDataType = (typeof json)[number]
 
-export type CodeSandboxIds = typeof json[number]["id"]
+export type CodeSandboxIds = (typeof json)[number]["id"]

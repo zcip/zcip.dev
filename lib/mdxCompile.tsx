@@ -5,7 +5,7 @@ import remarkGemoji from "remark-gemoji"
 import rehypeSlug from "rehype-slug"
 import rehypePrettyCode from "rehype-pretty-code"
 import { components } from "../components/MdxComponents"
-import remarkInjectJsx, { type TranslateJsx } from "@/lib/remark-inject-jsx"
+import remarkInjectJsx, { type TranslateJsx } from "@zcip/remark-inject-jsx"
 
 const translateTextToJsx: TranslateJsx = ({ replaceNodeToJsx, textValue }) => {
   const twitterPattern = /^https?:\/\/twitter\.com\/.*\/status\/(\d+)/

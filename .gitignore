@@ -42,3 +42,6 @@ public/sitemap-*.xml
 
 # generated images
 public/images/generated/blog/*.png
+
+# packages
+packages/**/dist/*

@@ -4,7 +4,12 @@
   "private": true,
   "scripts": {
     "postinstall": "patch-package",
+    "predev": "npm run w:build",
     "dev": "next dev",
+    "w:build": "npm run build -w packages",
+    "w:build:type": "npm run build:type -w packages",
+    "w:build:all": "npm run w:build:type && npm run w:build",
+    "prebuild": "npm run w:build:all",
     "build": "next build",
     "build:analyze": "ANALYZE=true next build",
     "postbuild": "next-sitemap",
@@ -40,6 +45,7 @@
     "@types/react": "18.0.33",
     "@types/react-dom": "18.0.11",
     "autoprefixer": "^10.4.14",
+    "esbuild": "^0.17.16",
     "eslint": "8.38.0",
     "eslint-config-next": "^13.2.4",
     "eslint-config-prettier": "^8.8.0",
@@ -51,5 +57,8 @@
     "tailwindcss": "^3.3.1",
     "typescript": "5.0.4",
     "unist-util-visit": "^4.1.2"
-  }
+  },
+  "workspaces": [
+    "./packages/*"
+  ]
 }

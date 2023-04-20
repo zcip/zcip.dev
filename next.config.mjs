@@ -36,6 +36,7 @@ const withBundleAnalyzer = analyze({
   enabled: process.env.ANALYZE === "true",
 })
 
+/** @type {import("next").NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
@@ -43,6 +44,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  transpilePackages: ["@zcip/remark-inject-jsx"],
   experimental: {
     appDir: true,
     typedRoutes: true,

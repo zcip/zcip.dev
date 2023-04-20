@@ -5,10 +5,9 @@ import remarkGemoji from "remark-gemoji"
 import rehypeSlug from "rehype-slug"
 import rehypePrettyCode from "rehype-pretty-code"
 import { components } from "../components/MdxComponents"
-import remarkInjectJsx from "../packages/remark-inject-jsx/dist/index.esm.js"
+import remarkInjectJsx, { type TranslateJsx } from "./remark-inject-jsx"
 
-// TODO:  型
-const translateTextToJsx = ({ replaceNodeToJsx, textValue }: any) => {
+const translateTextToJsx: TranslateJsx = ({ replaceNodeToJsx, textValue }) => {
   const twitterPattern = /^https?:\/\/twitter\.com\/.*\/status\/(\d+)/
   const tweetIdMatch = textValue.match(twitterPattern)
 

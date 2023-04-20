@@ -7,7 +7,7 @@ import rehypeSlug from "rehype-slug"
 import rehypePrettyCode from "rehype-pretty-code"
 import analyze from "@next/bundle-analyzer"
 import { prettyCodeOptions } from "./lib/rehypePrettyCodeOptions.mjs"
-import remarkInjectJsx from "@zcip/remark-inject-jsx"
+import remarkInjectJsx from "./packages/remark-inject-jsx/dist/index.esm.mjs"
 
 const translateTextToJsx = ({ replaceNodeToJsx, textValue }) => {
   const twitterPattern = /^https?:\/\/twitter\.com\/.*\/status\/(\d+)/

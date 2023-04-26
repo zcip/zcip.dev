@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    overflow-x: hidden;
+  }
+  /* h1 {
+    @apply leading-tight text-4xl md:text-5xl;
+  }
+  h2 {
+    @apply leading-tight text-3xl md:text-4xl;
+  }
+  h3 {
+    @apply text-2xl font-medium md:text-3xl;
+  }
+  h4 {
+    @apply text-xl font-medium md:text-2xl;
+  }
+  h5 {
+    @apply text-lg font-medium md:text-xl;
+  }
+  h6 {
+    @apply text-lg font-medium;
+  } */
+  p {
+    @apply mt-0 mb-8 text-gray-300;
+  }
+}

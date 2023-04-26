@@ -1,0 +1,16 @@
+# 日付処理
+
+- date-fns
+
+date-fns は、Moment.js よりも軽量なライブラリであり、TreeShaking に対応
+
+## 日付のフォーマット変換
+
+日付のフォーマット変換には、`date-fns` の `format` 関数を使います。
+
+```ts
+import { format } from "date-fns"
+
+console.log(format(new Date(), "yyyy/MM/dd")) // 2023/03/24
+console.log(format(new Date("2023-04-02"), "yyyy年M月d日") // 2023年4月2日
+```

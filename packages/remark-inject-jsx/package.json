@@ -1,0 +1,17 @@
+{
+  "name": "@zcip/remark-inject-jsx",
+  "version": "0.0.0",
+  "type": "module",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "import": "./dist/index.esm.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "esbuild src/index.ts --outfile=./dist/index.esm.mjs --bundle --platform=node --packages=external --format=esm",
+    "build:type": "tsc --declaration --emitDeclarationOnly --declarationDir './dist'"
+  }
+}

@@ -32,11 +32,6 @@ function Header() {
               </Link>
             </li>
             <li>
-              <Link href="/til" className="hover:text-white">
-                TIL
-              </Link>
-            </li>
-            <li>
               <Link href="/about" className="hover:text-white">
                 About
               </Link>
@@ -76,12 +71,6 @@ function Footer() {
             </li>
             <li>
               <Link href="/blog">Blog</Link>
-            </li>
-            <li>
-              <Link href="/til">Today I Learned</Link>
-            </li>
-            <li>
-              <Link href="/roadmap">Roadmap</Link>
             </li>
             <li>
               <a href="/sitemap.xml">Sitemap.xml</a>

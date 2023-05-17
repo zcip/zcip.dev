@@ -1,0 +1,16 @@
+diff --git a/node_modules/react-tweet/dist/api/get-tweet.js b/node_modules/react-tweet/dist/api/get-tweet.js
+index 6a3e7cc..fa629a2 100644
+--- a/node_modules/react-tweet/dist/api/get-tweet.js
++++ b/node_modules/react-tweet/dist/api/get-tweet.js
+@@ -30,9 +30,8 @@ export async function getTweet(id) {
+         'tfw_tweet_edit_frontend:on'
+     ].join(';'));
+     // The default `cache: 'force-cache'` can return 200 when there's an error
+-    const res = await fetch(url.toString(), {
+-        cache: 'no-store'
+-    });
++    // `cache: 'force-cache'` is not supported for static export.
++    const res = await fetch(url.toString());
+     const isJson = (_res_headers_get = res.headers.get('content-type')) == null ? void 0 : _res_headers_get.includes('application/json');
+     const data = isJson ? await res.json() : undefined;
+     if (res.ok) return data;

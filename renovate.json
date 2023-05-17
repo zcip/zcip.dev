@@ -15,5 +15,5 @@
   "automerge": true,
   "platformAutomerge": true,
   "dependencyDashboard": true,
-  "ignoreDeps": []
+  "ignoreDeps": ["react-tweet"]
 }

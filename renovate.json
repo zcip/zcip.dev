@@ -10,7 +10,7 @@
     "group:allNonMajor",
     "group:definitelyTyped",
     "group:linters",
-    "schedule:daily"
+    "schedule:monthly"
   ],
   "automerge": true,
   "platformAutomerge": true,

@@ -4,33 +4,25 @@ import "./app.css"
 import Link from "next/link"
 
 export const metadata = {
-  title: "Home",
-  description: `zcip's website`,
+  title: "zcip.dev",
+  description: `フロントエンドについての知見を共有します`,
   icons: {
-    // TODO: svg等の妥当なfaviconを設定する
-    //
     icon: "/icon.png",
   },
   other: {
     "Hatena::Bookmark": "nocomment",
   },
 }
+
 function Header() {
   return (
     <header className="w-screen h-24 flex items-center p-6">
       <nav className="w-full h-full flex text-white items-center flex-row">
-        <div className="text-white font-medium text-lg">
+        <div className="flex w-full justify-between max-w-screen-md">
           <Link href={"/"} className="tracking-wider text-lg text-white">
-            zcip
+            zcip.dev
           </Link>
-        </div>
-        <div className="flex w-full justify-center items-center">
           <ul className="flex gap-2 w-auto text-lg text-gray-300">
-            <li>
-              <Link href="/blog" className="hover:text-white">
-                Blog
-              </Link>
-            </li>
             <li>
               <Link href="/about" className="hover:text-white">
                 About
@@ -70,7 +62,7 @@ function Footer() {
               <Link href="/">Home</Link>
             </li>
             <li>
-              <Link href="/blog">Blog</Link>
+              <Link href="/about">About</Link>
             </li>
             <li>
               <a href="/sitemap.xml">Sitemap.xml</a>

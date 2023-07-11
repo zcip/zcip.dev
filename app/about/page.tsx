@@ -18,11 +18,6 @@ export default function AboutPage() {
         <p>今まで取り組んだプロジェクトです。</p>
         {/* TODO: リスト */}
       </section>
-      <section>
-        <h2>fun facts</h2>
-        {/* 結婚3年目です。 */}
-        {/* 4人兄弟の長男です。 */}
-      </section>
     </div>
   )
 }

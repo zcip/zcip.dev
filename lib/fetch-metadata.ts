@@ -1,16 +1,6 @@
 import "server-only"
 import { load } from "cheerio"
 
-// export async function scrapeMetadata(targetUrl: string) {
-//   return {
-//     title: "",
-//     description: "",
-//     host: "",
-//     image: "",
-//     faviconUrl: "",
-//   }
-// }
-
 export async function scrapeMetadata(targetUrl: string) {
   const response = await fetch(targetUrl)
   const html = await response.text()

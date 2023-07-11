@@ -7,24 +7,12 @@ import rehypeSlug from "rehype-slug"
 import rehypePrettyCode from "rehype-pretty-code"
 import analyze from "@next/bundle-analyzer"
 import { prettyCodeOptions } from "./lib/rehypePrettyCodeOptions.mjs"
-import remarkInjectJsx from "./packages/remark-inject-jsx/dist/index.esm.mjs"
-
-const translateTextToJsx = ({ replaceNodeToJsx, textValue }) => {
-  const twitterPattern = /^https?:\/\/twitter\.com\/.*\/status\/(\d+)/
-  const tweetIdMatch = textValue.match(twitterPattern)
-
-  if (tweetIdMatch) {
-    replaceNodeToJsx({ name: "Tweet", attributes: { id: tweetIdMatch[1] } })
-  } else if (/^https?:\/\/\S+$/.test(textValue)) {
-    replaceNodeToJsx({ name: "LinkCard", attributes: { href: textValue } })
-  }
-}
 
 // @see https://nextjs.org/docs/advanced-features/using-mdx
 const withMDX = addMdx({
   extension: /\.mdx?$/,
   options: {
-    remarkPlugins: [remarkGemoji, [remarkInjectJsx, translateTextToJsx]],
+    remarkPlugins: [remarkGemoji],
     rehypePlugins: [rehypeSlug, [rehypePrettyCode, prettyCodeOptions]],
     // If you use `MDXProvider`, uncomment the following line.
     // providerImportSource: "@mdx-js/react",
@@ -44,10 +32,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  transpilePackages: ["@zcip/remark-inject-jsx"],
   experimental: {
     appDir: true,
-    typedRoutes: true,
+    // typedRoutes: true,
     serverComponentsExternalPackages: ["@resvg/resvg-js", "satori"],
     // mdxRs: true,
   },

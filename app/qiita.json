@@ -1,0 +1,52 @@
+{
+  "posts": [
+    {
+      "id": "519f7e4d5442b2a9d2da",
+      "title": "idやclassを使ってテストを書くのは、もはやアンチパターンである",
+      "date": "2020年03月23日",
+      "views": "79351"
+    },
+    {
+      "id": "31e2078c38ff2fd60213",
+      "title": "どのようにreduxのreducerのテストを書くか？",
+      "date": "2018年04月02日",
+      "views": "11843"
+    },
+    {
+      "id": "e1489c6bbf3439ec6ca4",
+      "title": "さよならボイラープレート。s2sによる高速reduxアプリケーション構築",
+      "date": "2018年03月10日",
+      "views": "23430"
+    },
+    {
+      "id": "e12377e55e379d29636e",
+      "title": "2行でwebpack.config.jsで補完を効かせる方法",
+      "date": "2019年08月05日",
+      "views": "19173"
+    },
+    {
+      "id": "e0af9e3cdf1cdb6fca61",
+      "title": "名刺の代わりにCLIアプリを書く",
+      "date": "2018年05月16日",
+      "views": "28821"
+    },
+    {
+      "id": "e11023a59026c319b91b",
+      "title": "dependency-cruiserを使って依存関係を検証し潜在的なバグを潰す",
+      "date": "2018年09月04日",
+      "views": "8142"
+    },
+    {
+      "id": "fa80b9a325e3d1e8fd5b",
+      "title": "【Electron + react + flowtype】TweetDeckライクなpixivクライアントPixivDeckをつくった",
+      "date": "2017年02月16日",
+      "views": "15542"
+    },
+    {
+      "id": "343ebca91a9c8506b897",
+      "title": "TypeScript: 配列から要素の型を取得する",
+      "date": "2019年05月04日",
+      "views": "10632"
+    }
+  ]
+}

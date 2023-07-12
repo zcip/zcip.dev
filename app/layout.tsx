@@ -41,9 +41,9 @@ function Footer() {
       <nav className="grid grid-cols-3 gap-4">
         <div className="col-span-2 pb-3 p-4">
           <Link href="/" className="mb-6 inline-block text-gray-300">
-            zcip.web
+            zcip.dev
           </Link>
-          <p className="mb-6 text-gray-300 text-sm tracking-normal">
+          <p className="mb-6 text-gray-500 text-sm tracking-normal">
             常にクリエイティブな解決策を模索し、新しいアイデアを実現することに情熱を注いでいます。
           </p>
           <ul className="mb-2 px-6 flex flex-row gap-4">
@@ -52,20 +52,6 @@ function Footer() {
             </li>
             <li>
               <a href="https://github.com/zcip">GitHub</a>
-            </li>
-          </ul>
-        </div>
-        <div className="p-4">
-          <span className="mb-12 text-gray-300">Sitemap</span>
-          <ul className="flex flex-col gap-2">
-            <li>
-              <Link href="/">Home</Link>
-            </li>
-            <li>
-              <Link href="/about">About</Link>
-            </li>
-            <li>
-              <a href="/sitemap.xml">Sitemap.xml</a>
             </li>
           </ul>
         </div>

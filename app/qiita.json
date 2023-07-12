@@ -1,6 +1,12 @@
 {
   "posts": [
     {
+      "id": "cc73afcdb5ac5d0774bc",
+      "title": "async関数においてtry/catchではなくawait/catchパターンを活用する",
+      "date": "2017年08月31日",
+      "views": 137503
+    },
+    {
       "id": "519f7e4d5442b2a9d2da",
       "title": "idやclassを使ってテストを書くのは、もはやアンチパターンである",
       "date": "2020年03月23日",
@@ -25,12 +31,6 @@
       "views": 19173
     },
     {
-      "id": "e0af9e3cdf1cdb6fca61",
-      "title": "名刺の代わりにCLIアプリを書く",
-      "date": "2018年05月16日",
-      "views": 28821
-    },
-    {
       "id": "e11023a59026c319b91b",
       "title": "dependency-cruiserを使って依存関係を検証し潜在的なバグを潰す",
       "date": "2018年09月04日",
@@ -41,6 +41,12 @@
       "title": "【Electron + react + flowtype】TweetDeckライクなpixivクライアントPixivDeckをつくった",
       "date": "2017年02月16日",
       "views": 15542
+    },
+    {
+      "id": "e0af9e3cdf1cdb6fca61",
+      "title": "名刺の代わりにCLIアプリを書く",
+      "date": "2018年05月16日",
+      "views": 28821
     }
   ]
 }

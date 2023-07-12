@@ -1,6 +1,5 @@
 import postsData from "./qiita.json"
 
-// Qiitaの記事のリスト
 export default function Qiita() {
   return (
     <section>

@@ -23,14 +23,11 @@ function Posts() {
 
 export default async function HomePage() {
   return (
-    <main className="flex flex-col text-gray-300 px-2">
+    <main className="flex flex-col text-gray-300 px-6">
       <section className="pb-20">
         <Posts />
       </section>
-      <section>
-        <h3>他媒体のブログ記事</h3>
-        <Qiita />
-      </section>
+      <Qiita />
     </main>
   )
 }

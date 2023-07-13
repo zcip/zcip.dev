@@ -24,9 +24,7 @@ function Posts() {
 export default async function HomePage() {
   return (
     <main className="flex flex-col text-gray-300 px-6">
-      <section className="pb-20">
-        <Posts />
-      </section>
+      <section className="pb-20">{/* <Posts /> */}</section>
       <Qiita />
     </main>
   )

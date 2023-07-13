@@ -2,7 +2,7 @@
 import { Tweet, type TweetProps, type TweetComponents } from "react-tweet"
 import Image from "next/image"
 import LinkCard from "./LinkCard"
-import {HR} from './hr'
+import { HR } from "./hr"
 import { A } from "./a"
 import { P } from "./p"
 
@@ -12,10 +12,11 @@ const tweetComponents: TweetComponents = {
 }
 
 function TweetImpl(props: TweetProps) {
-
-    return <div className="not-prose">
+  return (
+    <div className="not-prose">
       <Tweet {...props} components={tweetComponents} />
     </div>
+  )
 }
 
 export const components = {
@@ -24,5 +25,5 @@ export const components = {
   Image,
   a: A,
   hr: HR,
-  p: P
+  p: P,
 }

@@ -8,6 +8,7 @@
     "build:analyze": "ANALYZE=true next build",
     "postbuild": "next-sitemap",
     "start": "next start",
+    "fmt": "prettier --write . --cache",
     "lint": "next lint"
   },
   "dependencies": {

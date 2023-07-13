@@ -27,7 +27,7 @@ export async function LinkCardImpl({ href }: Props) {
     )
   }
   const { title, description, image, host, faviconUrl } = await scrapeMetadata(
-    href
+    href,
   )
   return (
     <a

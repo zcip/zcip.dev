@@ -65,7 +65,7 @@ export function OGImage({ title }: Props) {
 
 export async function generateOGImage(props: Props & { slug: string }) {
   const fontData = await fs.readFile(
-    path.join(process.cwd(), `public`, `fonts`, `NotoSansJP-Regular.otf`)
+    path.join(process.cwd(), `public`, `fonts`, `NotoSansJP-Regular.otf`),
   )
   const satoriOptions: SatoriOptions = {
     width: 1200,
@@ -89,7 +89,7 @@ export async function generateOGImage(props: Props & { slug: string }) {
   const imagePath = path.join(
     process.cwd(),
     "public/images/generated/blog/",
-    `og-${props.slug}.png`
+    `og-${props.slug}.png`,
   )
 
   await fs.writeFile(imagePath, png)

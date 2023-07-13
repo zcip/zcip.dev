@@ -2,6 +2,8 @@ import "./globals.css"
 import "./app.css"
 
 import Link from "next/link"
+import { GitHubIcon } from "@/components/icons/github"
+import { TwitterIcon } from "@/components/icons/twitter"
 
 export const metadata = {
   title: "zcip.dev",
@@ -46,12 +48,22 @@ function Footer() {
           <p className="mb-6 text-gray-500 text-sm tracking-normal">
             常にクリエイティブな解決策を模索し、新しいアイデアを実現することに情熱を注いでいます。
           </p>
-          <ul className="mb-2 px-6 flex flex-row gap-4">
+          <ul className="mb-2 px-6 flex flex-row gap-4 text-white">
             <li>
-              <a href="https://twitter.com/zcip">Twitter</a>
+              <a
+                href="https://twitter.com/zcip"
+                className="text-gray-200 hover:text-gray-500"
+              >
+                <TwitterIcon />
+              </a>
             </li>
             <li>
-              <a href="https://github.com/zcip">GitHub</a>
+              <a
+                href="https://github.com/zcip"
+                className="text-gray-200 hover:text-gray-500"
+              >
+                <GitHubIcon />
+              </a>
             </li>
           </ul>
         </div>

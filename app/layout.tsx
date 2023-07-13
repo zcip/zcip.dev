@@ -18,20 +18,21 @@ export const metadata = {
 
 function Header() {
   return (
-    <header className="w-screen h-24 flex items-center p-6">
-      <nav className="w-full h-full flex text-white items-center flex-row">
-        <div className="flex w-full justify-between max-w-screen-md">
-          <Link href={"/"} className="tracking-wider text-lg text-white">
-            zcip.dev
-          </Link>
-          <ul className="flex gap-2 w-auto text-lg text-gray-300">
-            <li>
-              <Link href="/about" className="hover:text-white">
-                About
-              </Link>
-            </li>
-          </ul>
-        </div>
+    <header className="max-w-4xl w-full h-24 p-6">
+      <nav className="w-full h-full flex text-white flex-row items-center justify-between">
+        <Link
+          href={"/"}
+          className="block tracking-wider text-lg text-white font-bold"
+        >
+          zcip.dev
+        </Link>
+        <ul className="flex gap-2 w-auto text-lg text-gray-300">
+          <li>
+            <Link href="/about" className="hover:text-white">
+              About
+            </Link>
+          </li>
+        </ul>
       </nav>
     </header>
   )

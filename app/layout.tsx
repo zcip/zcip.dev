@@ -4,6 +4,7 @@ import "./app.css"
 import Link from "next/link"
 import { GitHubIcon } from "@/components/icons/github"
 import { TwitterIcon } from "@/components/icons/twitter"
+import Script from "next/script"
 
 export const metadata = {
   title: "zcip.dev",
@@ -76,6 +77,16 @@ function Footer() {
 export default function RootLayout({ children }: React.PropsWithChildren<{}>) {
   return (
     <html lang="ja">
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-VZDXJB3G4L" />
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-VZDXJB3G4L');
+        `}
+      </Script>
       <body className="bg-gray-900 min-h-screen flex flex-col items-center">
         <Header />
         <div className="flex-1 pt-4 max-w-3xl w-full mx-2">{children}</div>

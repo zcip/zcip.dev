@@ -1,12 +1,12 @@
 /* eslint-disable jsx-a11y/alt-text */
-import { Tweet, type TweetProps, type TweetComponents } from "react-tweet"
+import { Tweet, type TweetProps, type TwitterComponents } from "react-tweet"
 import Image from "next/image"
 import LinkCard from "./LinkCard"
 import { HR } from "./hr"
 import { A } from "./a"
 import { P } from "./p"
 
-const tweetComponents: TweetComponents = {
+const tweetComponents: TwitterComponents = {
   AvatarImg: (props) => <Image {...props} />,
   MediaImg: (props) => <Image {...props} fill unoptimized />,
 }

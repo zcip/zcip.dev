@@ -37,7 +37,7 @@ export async function LinkCardImpl({ href }: Props) {
       className="not-prose w-full flex flex-row items-center transition border-2 rounded-lg border-gray-600 hover:bg-gray-700 h-[132px] overflow-hidden p-0  no-underline relative mb-4"
     >
       <div className="flex-1 flex flex-col w-full flex-wrap items-start px-3 gap-1">
-        <span className="text-lg m-0 p-0 line-clamp-1 tracking-tight">
+        <span className="text-lg m-0 p-0 line-clamp-1 tracking-tight text-white">
           {title ? title : href}
         </span>
         {description && (
@@ -60,7 +60,7 @@ export async function LinkCardImpl({ href }: Props) {
           <span className="text-gray-100 text-sm">{host}</span>
         </div>
       </div>
-      <div className="h-[132px] max-w-[264px]">
+      <div className="h-[132px] max-w-[264px] aspect-[2/1]">
         <img
           src={image}
           width={200}

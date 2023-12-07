@@ -33,7 +33,6 @@ const nextConfig = {
     unoptimized: true,
   },
   experimental: {
-    appDir: true,
     // typedRoutes: true,
     serverComponentsExternalPackages: ["@resvg/resvg-js", "satori"],
     // mdxRs: true,

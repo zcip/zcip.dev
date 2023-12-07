@@ -5,6 +5,7 @@
 @layer base {
   body {
     overflow-x: hidden;
+    @apply text-gray-300 dark:text-white;
   }
   /* h1 {
     @apply leading-tight text-4xl md:text-5xl;

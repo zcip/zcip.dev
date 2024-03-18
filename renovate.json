@@ -6,7 +6,7 @@
     ":automergeLinters",
     ":automergeMinor",
     ":automergeTypes",
-    ":maintainLockFilesWeekly",
+    ":maintainLockFilesMonthly",
     "group:allNonMajor",
     "group:definitelyTyped",
     "group:linters",

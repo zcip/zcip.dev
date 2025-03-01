@@ -37,7 +37,7 @@
     "@types/react": "18.3.18",
     "@types/react-dom": "18.3.5",
     "autoprefixer": "^10.4.14",
-    "eslint": "9.17.0",
+    "eslint": "9.21.0",
     "eslint-config-next": "^15.0.0",
     "eslint-config-prettier": "^9.0.0",
     "next-compose-plugins": "^2.2.1",
